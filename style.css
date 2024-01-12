@@ -2,10 +2,20 @@ body {
   color: whitesmoke;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   background-image: url("fond.webp");
-  background-size: 100%;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.623);
   margin: 0;
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url("fondPhone.webp");
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+  body {
+    background-image: url("fondMidle.png");
+  }
 }
 
 q {
@@ -23,8 +33,14 @@ q {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px;
+  margin: 50px;
   font-size: 25px;
+}
+@media screen and (max-width: 600px) {
+  .quoteSection {
+    font-size: 15px;
+    margin: 20px;
+  }
 }
 
 .quoteButton {
@@ -38,13 +54,25 @@ q {
   transition: transform 0.5s ease;
   color: rgb(132, 34, 63);
 }
+@media screen and (max-width: 600px) {
+  .quoteButton {
+    font-size: 15px;
+  }
+}
 .quoteButton:hover {
   transform: scale(1.1);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-  font-size: 40px;
+  text-align: center;
+  font-size: 30px;
+  margin: 30px;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
 }
 
 #loading {
@@ -76,6 +104,24 @@ main {
   background-color: rgba(0, 0, 0, 0.676);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+}
+
+.name {
+  font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+  .name {
+    font-size: 15px;
+  }
+}
+
+.ageAuthor {
+  font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+  .ageAuthor {
+    font-size: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */
