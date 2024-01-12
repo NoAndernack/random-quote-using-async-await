@@ -16,8 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
             let firstName = authorName.split(' ')[0]; 
 
         quote.textContent = json.quote;
-        img.src = json.photo;
+        img.src = json.photo || "photoVide.png";
         author.textContent = authorName;
+
+
         return fetchName2(firstName); 
     })
     .then(response => response.json())
@@ -42,7 +44,7 @@ quoteButton.addEventListener('click', () => {
             let firstName = authorName.split(' ')[0]; 
 
             quote.textContent = json.quote;
-            img.src = json.photo;
+            img.src = json.photo || "photoVide.png";
             author.textContent = authorName;
 
             return fetchName2(firstName); 
