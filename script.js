@@ -32,12 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 quoteButton.addEventListener('click', () => {
-    quote.textContent = '';
+    quote.textContent = "";
     img.src = ''; 
     author.textContent = '';
     ageAuthor.textContent = '';
-
-    fetchName()
+    document.querySelector('#loading').style.visibility = 'visible';
+    setTimeout(() => {
+        
+    ;fetchName()
         .then(response => response.json())
         .then(json => {
             authorName = json.author;
@@ -55,5 +57,8 @@ quoteButton.addEventListener('click', () => {
         })
         .catch(error => {
             console.log("There was an error!", error);
+            
         });
+        document.querySelector('#loading').style.visibility = 'hidden';
+    }, 2000)
 });
