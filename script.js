@@ -3,7 +3,7 @@ const quoteButton = document.querySelector('.quoteButton');
 const quote = document.querySelector('q');
 const img = document.querySelector('.img');
 const author = document.querySelector('.name');
-
+const loader = document.querySelector("#loader")
 document.addEventListener("DOMContentLoaded", () => {
     fetchName()
     .then(response => response.json())
