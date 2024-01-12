@@ -1,4 +1,4 @@
-const fetchName = () => fetch('https://thatsthespir.it/api');
+const fetchName = async() => fetch('https://thatsthespir.it/api');
 const quoteButton = document.querySelector('.quoteButton');
 const quote = document.querySelector('q');
 const img = document.querySelector('.img');
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 quoteButton.addEventListener('click', () => {
+    
     quote.textContent = '';
     img.src = ''; 
     author.textContent = '';
